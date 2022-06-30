@@ -30,7 +30,7 @@ body {
         flex-direction: column;
         height: 100%;
         width: 100%;
-        background: url("/assets/background.jpg") center / cover no-repeat;
+        background: url("../assets/background.jpg") center / cover no-repeat;
     
         & .desktop {
             height: 95%;
@@ -94,42 +94,42 @@ body {
             }
     
             & #start_btn{
-                content: url("/assets/home.png");
+                content: url("../assets/home.png");
                 padding: 5px;
             }
     
             & #search_btn{
-                content: url("/assets/search.png");
+                content: url("../assets/search.png");
                 padding: 5px;
             }
     
             & #task_view_btn{
-                content: url("/assets/task_view.png");
+                content: url("../assets/task_view.png");
                 padding: 5px;
             }
     
             & #file_explorer_btn{
-                content: url("/assets/files.png");
+                content: url("../assets/files.png");
                 padding: 3px;
             }
     
             & #microsoft_edge_btn{
-                content: url("/assets/edge.png");
+                content: url("../assets/edge.png");
                 padding: 3px;
             }
     
             & #microsoft_store_btn{
-                content: url("/assets/store.png");
+                content: url("../assets/store.png");
                 padding: 3px;
             }
     
             & #microsoft_defender_btn{
-                content: url("/assets/security.png");
+                content: url("../assets/security.png");
                 padding: 3px;
             }
     
             & #microsoft_settings_btn{
-                content: url("/assets/settings.png");
+                content: url("../assets/settings.png");
                 padding: 3px;
             }
     
