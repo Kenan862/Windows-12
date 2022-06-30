@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@mixin glass {
+    background: rgba(255, 255, 255, 0.715);
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    user-select: none;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+
+    & main {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        background: url("/assets/background.jpg") center / cover no-repeat;
+    
+        & .desktop {
+            height: 95%;
+            width: 100%;
+        }
+    
+        & .taskbar_area {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 5%;
+            width: 100%;
+            transform: translateY(-5px);
+    
+            & .taskbar_1{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 5px;
+                height: 100%;
+                width: 10%;
+                @include glass();
+            }
+    
+            & .taskbar_2 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                width: 80%;
+                @include glass();
+            }
+    
+            & .taskbar_3{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 5px;
+                height: 100%;
+                width: 10%;
+                @include glass();
+            }
+    
+            & .taskbar_btn{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 5px;
+                margin: 5px;
+                height: 30px;
+                width: 30px;
+                
+                &:hover{
+                    background: rgba(255, 255, 255, 0.88);
+                    transition: 0.2s;
+                }
+    
+                &:not(:hover){
+                    transition: 0.2s;
+                }
+            }
+    
+            & #start_btn{
+                content: url("/assets/home.png");
+                padding: 5px;
+            }
+    
+            & #search_btn{
+                content: url("/assets/search.png");
+                padding: 5px;
+            }
+    
+            & #task_view_btn{
+                content: url("/assets/task_view.png");
+                padding: 5px;
+            }
+    
+            & #file_explorer_btn{
+                content: url("/assets/files.png");
+                padding: 3px;
+            }
+    
+            & #microsoft_edge_btn{
+                content: url("/assets/edge.png");
+                padding: 3px;
+            }
+    
+            & #microsoft_store_btn{
+                content: url("/assets/store.png");
+                padding: 3px;
+            }
+    
+            & #microsoft_defender_btn{
+                content: url("/assets/security.png");
+                padding: 3px;
+            }
+    
+            & #microsoft_settings_btn{
+                content: url("/assets/settings.png");
+                padding: 3px;
+            }
+    
+            & #more_options_btn{
+                font-size: 22px;
+            }
+    
+        }
+    
+        & .notification{
+            overflow: hidden;
+            position: absolute;
+            border-radius: 10px;
+            left: 79.5%;
+            bottom: 7%;
+            height: 100px;
+            width: 255px;
+            @include glass();
+        
+            &:hover{
+                width: 260px;
+                height: 105px;
+                left: 78.5%;
+                transition: 0.5s;
+            }
+
+            &:not(:hover){
+                transition: 0.5s;
+            }
+
+        }
+
+        & .ms_edge_window{
+           top: 10%; 
+        }
+    
+    }   
+
+}

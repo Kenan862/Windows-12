@@ -1,0 +1,5 @@
+function deviceCheck() {
+    
+}
+
+export{deviceCheck}

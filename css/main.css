@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+}
+body main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background: url("/assets/background.jpg") center/cover no-repeat;
+}
+body main .desktop {
+  height: 95%;
+  width: 100%;
+}
+body main .taskbar_area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5%;
+  width: 100%;
+  transform: translateY(-5px);
+}
+body main .taskbar_area .taskbar_1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  height: 100%;
+  width: 10%;
+  background: rgba(255, 255, 255, 0.715);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+body main .taskbar_area .taskbar_2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 80%;
+  background: rgba(255, 255, 255, 0.715);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+body main .taskbar_area .taskbar_3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  height: 100%;
+  width: 10%;
+  background: rgba(255, 255, 255, 0.715);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+body main .taskbar_area .taskbar_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin: 5px;
+  height: 30px;
+  width: 30px;
+}
+body main .taskbar_area .taskbar_btn:hover {
+  background: rgba(255, 255, 255, 0.88);
+  transition: 0.2s;
+}
+body main .taskbar_area .taskbar_btn:not(:hover) {
+  transition: 0.2s;
+}
+body main .taskbar_area #start_btn {
+  content: url("/assets/home.png");
+  padding: 5px;
+}
+body main .taskbar_area #search_btn {
+  content: url("/assets/search.png");
+  padding: 5px;
+}
+body main .taskbar_area #task_view_btn {
+  content: url("/assets/task_view.png");
+  padding: 5px;
+}
+body main .taskbar_area #file_explorer_btn {
+  content: url("/assets/files.png");
+  padding: 3px;
+}
+body main .taskbar_area #microsoft_edge_btn {
+  content: url("/assets/edge.png");
+  padding: 3px;
+}
+body main .taskbar_area #microsoft_store_btn {
+  content: url("/assets/store.png");
+  padding: 3px;
+}
+body main .taskbar_area #microsoft_defender_btn {
+  content: url("/assets/security.png");
+  padding: 3px;
+}
+body main .taskbar_area #microsoft_settings_btn {
+  content: url("/assets/settings.png");
+  padding: 3px;
+}
+body main .taskbar_area #more_options_btn {
+  font-size: 22px;
+}
+body main .notification {
+  overflow: hidden;
+  position: absolute;
+  border-radius: 10px;
+  left: 79.5%;
+  bottom: 7%;
+  height: 100px;
+  width: 255px;
+  background: rgba(255, 255, 255, 0.715);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+body main .notification:hover {
+  width: 260px;
+  height: 105px;
+  left: 78.5%;
+  transition: 0.5s;
+}
+body main .notification:not(:hover) {
+  transition: 0.5s;
+}
+body main .ms_edge_window {
+  top: 10%;
+}/*# sourceMappingURL=main.css.map */
