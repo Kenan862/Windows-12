@@ -2,7 +2,7 @@ function ms_edge() {
   $("main").append(`
     <div class="card shadow-lg position-absolute h-75 w-50 ms_edge_window" style="display: none">
     <div class="card-header border-bottom-0 d-flex align-items-center p-0" style="height:25px;">
-    &nbsp;<img style="height:15px;"src="../assets/edge.png"/>&nbsp;<div class="card p-1 border-bottom-0 border-info rounded-0 d-flex justify-content-center" style="height:100%; width:150px; n">
+    &nbsp;<img style="height:15px;"src="/assets/edge.png"/>&nbsp;<div class="card p-1 border-bottom-0 border-info rounded-0 d-flex justify-content-center" style="height:100%; width:150px; n">
     <small>Welcome
     <button type="button" class="close position-absolute" aria-label="Close" style="left:86%; top:-15%;">
   <span style="font-size:20px" aria-hidden="true">&times;</span>
