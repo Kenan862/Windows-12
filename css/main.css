@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   padding: 0;
@@ -153,6 +154,167 @@ body main .notification:hover {
 body main .notification:not(:hover) {
   transition: 0.5s;
 }
-body main .ms_edge_window {
+body main .ms_edge_window, body main .explorer_window, body main .ms_store_window, body main .ms_security_window, body main .ms_settings_window {
   top: 10%;
+}
+body main #search_field {
+  position: absolute;
+  width: 900px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.715);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  top: 34.5%;
+  left: -10%;
+  border-radius: 16px;
+  overflow: hidden;
+  transform: scale(0.7, 0.7);
+  /* здесь начинается верх */
+  /* заканчивается верх */
+}
+body main #search_field header {
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
+}
+body main #search_field header section {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body main #search_field header section p {
+  color: #7c7c7c;
+  font-size: 1rem;
+  cursor: pointer;
+  display: block;
+}
+body main #search_field header section p:hover {
+  font-weight: bolder;
+  color: #000;
+  transition: 0.5s;
+}
+body main #search_field header section p:not(:hover) {
+  transition: 0.5s;
+}
+body main #search_field header section:nth-child(2) {
+  height: 100%;
+  width: 40%;
+  display: flex;
+}
+body main #search_field header section:nth-child(2) .profile {
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.3843137255);
+  margin-left: 200px;
+  border-radius: 100%;
+  font-size: 1.5rem;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main #search_field article {
+  width: 100%;
+  height: 70%;
+  display: flex;
+}
+body main #search_field article section:first-child {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+body main #search_field article section:first-child p:first-child {
+  font-size: 1.3rem;
+  margin: 20px;
+}
+body main #search_field article section:first-child div {
+  width: 100%;
+  height: 90%;
+  background: #ffffff;
+  font-size: 4rem;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main #search_field article nav {
+  width: 40%;
+  height: 50%;
+  background: #000;
+  margin: 100px 0px 0px 50px;
+  color: #fff;
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main #search_field footer {
+  width: 100%;
+  height: 31%;
+  display: flex;
+  align-items: end;
+}
+body main #search_field footer form {
+  width: 100%;
+  padding: 5px;
+}
+body main #search_field footer .group {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+body main #search_field footer .input {
+  width: 100%;
+  height: 40px;
+  line-height: 28px;
+  padding: 0 1rem;
+  padding-left: 2.5rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f3f3f4;
+  color: #0d0c22;
+  transition: 0.3s ease;
+}
+body main #search_field footer .input::-moz-placeholder {
+  color: #9e9ea7;
+}
+body main #search_field footer .input:-ms-input-placeholder {
+  color: #9e9ea7;
+}
+body main #search_field footer .input::placeholder {
+  color: #9e9ea7;
+}
+body main #search_field footer .input:focus, body main #search_field footer input:hover {
+  outline: none;
+  border-color: rgba(76, 174, 234, 0.4);
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(76, 176, 234, 0.1);
+}
+body main #search_field footer .icon {
+  position: absolute;
+  left: 1rem;
+  fill: #9e9ea7;
+  width: 1rem;
+  height: 1rem;
+}
+body main .start_menu {
+  background: rgba(255, 255, 255, 0.715);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }/*# sourceMappingURL=main.css.map */

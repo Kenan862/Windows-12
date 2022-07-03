@@ -31,12 +31,12 @@ body {
         height: 100%;
         width: 100%;
         background: url("../assets/background.jpg") center / cover no-repeat;
-    
+
         & .desktop {
             height: 95%;
             width: 100%;
         }
-    
+
         & .taskbar_area {
             display: flex;
             align-items: center;
@@ -44,8 +44,8 @@ body {
             height: 5%;
             width: 100%;
             transform: translateY(-5px);
-    
-            & .taskbar_1{
+
+            & .taskbar_1 {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -54,7 +54,7 @@ body {
                 width: 10%;
                 @include glass();
             }
-    
+
             & .taskbar_2 {
                 display: flex;
                 align-items: center;
@@ -63,8 +63,8 @@ body {
                 width: 80%;
                 @include glass();
             }
-    
-            & .taskbar_3{
+
+            & .taskbar_3 {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -73,8 +73,8 @@ body {
                 width: 10%;
                 @include glass();
             }
-    
-            & .taskbar_btn{
+
+            & .taskbar_btn {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -82,64 +82,64 @@ body {
                 margin: 5px;
                 height: 30px;
                 width: 30px;
-                
-                &:hover{
+
+                &:hover {
                     background: rgba(255, 255, 255, 0.88);
                     transition: 0.2s;
                 }
-    
-                &:not(:hover){
+
+                &:not(:hover) {
                     transition: 0.2s;
                 }
             }
-    
-            & #start_btn{
+
+            & #start_btn {
                 content: url("../assets/home.png");
                 padding: 5px;
             }
-    
-            & #search_btn{
+
+            & #search_btn {
                 content: url("../assets/search.png");
                 padding: 5px;
             }
-    
-            & #task_view_btn{
+
+            & #task_view_btn {
                 content: url("../assets/task_view.png");
                 padding: 5px;
             }
-    
-            & #file_explorer_btn{
+
+            & #file_explorer_btn {
                 content: url("../assets/files.png");
                 padding: 3px;
             }
-    
-            & #microsoft_edge_btn{
+
+            & #microsoft_edge_btn {
                 content: url("../assets/edge.png");
                 padding: 3px;
             }
-    
-            & #microsoft_store_btn{
+
+            & #microsoft_store_btn {
                 content: url("../assets/store.png");
                 padding: 3px;
             }
-    
-            & #microsoft_defender_btn{
+
+            & #microsoft_defender_btn {
                 content: url("../assets/security.png");
                 padding: 3px;
             }
-    
-            & #microsoft_settings_btn{
+
+            & #microsoft_settings_btn {
                 content: url("../assets/settings.png");
                 padding: 3px;
             }
-    
-            & #more_options_btn{
+
+            & #more_options_btn {
                 font-size: 22px;
             }
-    
+
         }
-    
-        & .notification{
+
+        & .notification {
             overflow: hidden;
             position: absolute;
             border-radius: 10px;
@@ -148,24 +148,201 @@ body {
             height: 100px;
             width: 255px;
             @include glass();
-        
-            &:hover{
+
+            &:hover {
                 width: 260px;
                 height: 105px;
                 left: 78.5%;
                 transition: 0.5s;
             }
 
-            &:not(:hover){
+            &:not(:hover) {
                 transition: 0.5s;
             }
 
         }
 
-        & .ms_edge_window{
-           top: 10%; 
+        & .ms_edge_window, & .explorer_window, & .ms_store_window, & .ms_security_window, & .ms_settings_window {
+            top: 10%;
         }
-    
-    }   
+
+        & #search_field {
+            position: absolute;
+            width: 900px;
+            height: 500px;
+            @include glass();
+            display: flex;
+            flex-direction: column;
+            top: 34.5%;
+            left: -10%;
+            border-radius: 16px;
+            overflow: hidden;
+            transform: scale(0.7, 0.7);
+
+            /* здесь начинается верх */
+
+            & header {
+                width: 100%;
+                height: 70px;
+                background: linear-gradient(to right, #c9d6ff, #e2e2e2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                display: flex;
+
+                & section {
+                    width: 60%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+
+                    & p {
+                        color: #7c7c7c;
+                        font-size: 1rem;
+                        cursor: pointer;
+                        display: block;
+
+                        &:hover {
+                            font-weight: bolder;
+                            color: #000;
+                            transition: 0.5s;
+                        }
+
+                        &:not(:hover) {
+                            transition: 0.5s;
+                        }
+
+
+                    }
+
+                    &:nth-child(2) {
+                        height: 100%;
+                        width: 40%;
+                        display: flex;
+
+                        & .profile {
+                            width: 50px;
+                            height: 50px;
+                            background: #00000062;
+                            margin-left: 200px;
+                            border-radius: 100%;
+                            font-size: 1.5rem;
+                            color: #000;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                    }
+
+
+                }
+            }
+
+            /* заканчивается верх */
+
+            & article {
+                width: 100%;
+                height: 70%;
+                display: flex;
+
+                & section:first-child {
+                    height: 100%;
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+
+                    & p:first-child {
+                        font-size: 1.3rem;
+                        margin: 20px;
+                    }
+
+                    & div {
+                        width: 100%;
+                        height: 90%;
+                        background: #ffffff;
+                        font-size: 4rem;
+                        margin-left: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                }
+
+
+                & nav {
+                    width: 40%;
+                    height: 50%;
+                    background: #000;
+                    margin: 100px 0px 0px 50px;
+                    color: #fff;
+                    font-size: 4rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+            }
+
+            & footer {
+                width: 100%;
+                height: 31%;
+                display: flex;
+                align-items: end;
+
+                & form{
+                    width: 100%;
+                    padding: 5px;
+                }
+
+                & .group {
+                    display: flex;
+                    line-height: 28px;
+                    align-items: center;
+                    position: relative;
+                    width: 100%;
+                }
+
+.input {
+ width: 100%;
+ height: 40px;
+ line-height: 28px;
+ padding: 0 1rem;
+ padding-left: 2.5rem;
+ border: 2px solid transparent;
+ border-radius: 8px;
+ outline: none;
+ background-color: #f3f3f4;
+ color: #0d0c22;
+ transition: .3s ease;
+}
+
+.input::placeholder {
+ color: #9e9ea7;
+}
+
+.input:focus, input:hover {
+ outline: none;
+ border-color: rgba(76, 174, 234, 0.4);
+ background-color: #fff;
+ box-shadow: 0 0 0 4px rgba(76, 176, 234, 0.1);
+}
+
+.icon {
+ position: absolute;
+ left: 1rem;
+ fill: #9e9ea7;
+ width: 1rem;
+ height: 1rem;
+}
+
+            }
+
+        }
+
+        & .start_menu{
+            @include glass();
+        }
+
+    }
 
 }
