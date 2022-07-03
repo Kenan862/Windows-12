@@ -1,14 +1,16 @@
+import { dragElement } from "./dragElement.js";
+
 function explorer() {
     $("main").append(`
-    <div class="card shadow-lg position-absolute d-flex justify-content-center align-items-center h-75 w-50 explorer_window" style="display: none ">
-            <img style="height:100px;"src="/assets/files.png"/>
+    <div class="card shadow-lg position-absolute d-flex justify-content-center align-items-center h-75 w-50 explorer_window" id="explorer_window" style="display: none ">
+            <img style="height:100px;"src="./assets/files.png"/>
     </div>
     `)
 
     setTimeout(() => {
         $(".explorer_window").children().fadeOut(() => {
-            $(".explorer_window").empty().removeClass("d-flex justify-content-center align-items-center").append(`<div class="card-header border-bottom-0 d-flex align-items-center p-0" style="height:25px;">
-        &nbsp;<img style="height:15px;"src="/assets/files.png"/>&nbsp;<small>File Explorer</small>
+            $(".explorer_window").empty().removeClass("d-flex justify-content-center align-items-center").append(`<div class="card-header explorer_window_header border-bottom-0 d-flex align-items-center p-0" style="height:25px;">
+        &nbsp;<img style="height:15px;"src="./assets/files.png"/>&nbsp;<small>File Explorer</small>
         <button type="button" class="btn btn-outline-dark minimize_btn rounded-0 position-absolute d-flex justify-content-center align-items-center border-0" style="left:83.4%; height:25px; font-size:12px;"><i class="fal fa-window-minimize"></i></button>
         <button type="button" class="btn btn-outline-dark maximize_btn rounded-0 position-absolute d-flex justify-content-center align-items-center border-0" style="left:89%; height:25px; font-size:12px;"><i class="fal fa-window-maximize"></i></button>
       <button type="button" class="btn btn-outline-danger close_btn rounded-sm position-absolute d-flex justify-content-center align-items-center border-0" style="left:94.7%; height:25px; font-size:15px;"><i class="fal fa-times"></i></button>
@@ -61,6 +63,8 @@ function explorer() {
     }, 1000);
 
     $(".explorer_window").show('fast');
+
+    dragElement(document.getElementById("explorer_window"));
 }
 
 export {

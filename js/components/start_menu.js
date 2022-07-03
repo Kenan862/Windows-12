@@ -15,7 +15,7 @@ function start_menu() {
             <div class="card border-0 rounded-0 bg-transparent d-flex justify-content-evenly h-100 w-25">
             <div class="card border-0 rounded-0 bg-transparent">
                 <div class="card-body p-0">
-                    <button type="button" class="btn btn-outline-light border-0" style="color:#000; height:60px; width:180px;"><img src="/assets/Accounts.png"/><small>&nbsp;&nbsp;Administrator&nbsp;</small>&nbsp;&nbsp;<i class="fal fa-angle-down"></i></button>
+                    <button type="button" class="btn btn-outline-light border-0" style="color:#000; height:60px; width:180px;"><img src="./assets/Accounts.png"/><small>&nbsp;&nbsp;Administrator&nbsp;</small>&nbsp;&nbsp;<i class="fal fa-angle-down"></i></button>
                 </div>
             </div>
             <div class="card border-0 rounded-0 bg-transparent">

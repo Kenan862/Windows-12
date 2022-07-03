@@ -1,14 +1,17 @@
+import { dragElement } from "./dragElement.js";
+
+
 function settings(){
     $("main").append(`
-    <div class="card shadow-lg position-absolute d-flex justify-content-center align-items-center h-75 w-50 ms_settings_window" style="display: none ">
-            <img style="height:100px;"src="/assets/settings.png"/>
+    <div class="card shadow-lg position-absolute d-flex justify-content-center align-items-center h-75 w-50 ms_settings_window" id="ms_settings_window" style="display: none ">
+            <img style="height:100px;"src="./assets/settings.png"/>
     </div>
     `)
 
     setTimeout(() => {
         $(".ms_settings_window").children().fadeOut(() => {
-            $(".ms_settings_window").empty().removeClass("d-flex justify-content-center align-items-center").append(`<div class="card-header border-bottom-0 d-flex align-items-center p-0" style="height:25px;">
-        &nbsp;<img style="height:15px;"src="/assets/settings.png"/>&nbsp;<small>System Settings</small>
+            $(".ms_settings_window").empty().removeClass("d-flex justify-content-center align-items-center").append(`<div class="card-header ms_settings_window_header border-bottom-0 d-flex align-items-center p-0" style="height:25px;">
+        &nbsp;<img style="height:15px;"src="./assets/settings.png"/>&nbsp;<small>System Settings</small>
         <button type="button" class="btn btn-outline-dark minimize_btn rounded-0 position-absolute d-flex justify-content-center align-items-center border-0" style="left:83.4%; height:25px; font-size:12px;"><i class="fal fa-window-minimize"></i></button>
         <button type="button" class="btn btn-outline-dark maximize_btn rounded-0 position-absolute d-flex justify-content-center align-items-center border-0" style="left:89%; height:25px; font-size:12px;"><i class="fal fa-window-maximize"></i></button>
       <button type="button" class="btn btn-outline-danger close_btn rounded-sm position-absolute d-flex justify-content-center align-items-center border-0" style="left:94.7%; height:25px; font-size:15px;"><i class="fal fa-times"></i></button>
@@ -61,6 +64,8 @@ function settings(){
     }, 1000);
 
     $(".ms_settings_window").show('fast');
+
+    dragElement(document.getElementById("ms_settings_window"));
 }
 
 export{settings}

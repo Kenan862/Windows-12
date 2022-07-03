@@ -1,14 +1,16 @@
+import { dragElement } from "./dragElement.js";
+
 function ms_edge() {
   $("main").append(`
-    <div class="card shadow-lg position-absolute d-flex justify-content-center align-items-center h-75 w-50 ms_edge_window" style="display: none">
-            <img style="height:100px;"src="/assets/edge.png"/>
+    <div class="card shadow-lg position-absolute d-flex justify-content-center align-items-center h-75 w-50 ms_edge_window" id="ms_edge_window" style="display: none">
+            <img style="height:100px;"src="./assets/edge.png"/>
     </div>
     `)
 
   setTimeout(() => {
     $(".ms_edge_window").children().fadeOut(() => {
-      $(".ms_edge_window").empty().removeClass("d-flex justify-content-center align-items-center").append(`<div class="card-header border-bottom-0 d-flex align-items-center p-0" style="height:25px;">
-        &nbsp;<img style="height:15px;"src="/assets/edge.png"/>&nbsp;<div class="card p-1 border-bottom-0 border-info rounded-0 d-flex justify-content-center" style="height:100%; width:150px; n">
+      $(".ms_edge_window").empty().removeClass("d-flex justify-content-center align-items-center").append(`<div class="card-header ms_edge_window_header border-bottom-0 d-flex align-items-center p-0" style="height:25px;">
+        &nbsp;<img style="height:15px;"src="./assets/edge.png"/>&nbsp;<div class="card p-1 border-bottom-0 border-info rounded-0 d-flex justify-content-center" style="height:100%; width:150px; n">
         <small>Welcome
   
         </small>
@@ -19,7 +21,7 @@ function ms_edge() {
       </div>
     <div class="input-group input-group-sm">
       <span class="input-group-text" id="input-group-sm-example"><button type="button" class="btn btn-outline-dark border-0 btn-sm back_btn"><i class="fal fa-angle-left"></i></button><button type="button" class="btn btn-outline-dark border-0 btn-sm forward_btn"><i class="fal fa-angle-right"></i></button><button type="button" class="btn btn-outline-dark border-0 btn-sm refresh_btn"><i class="fal fa-redo"></i></button></span>
-      <input type="text" placeholder="Search" class="form-control web-search" aria-label="Small input group" aria-describedby="input-group-sm">
+      <input type="text" placeholder="Search" class="form-control position web-search" aria-label="Small input group" aria-describedby="input-group-sm">
       <span class="input-group-text" id="input-group-sm-example">Beta</span>
     </div>
       <div class="card-body edge_content d-flex flex-direction-column p-0 justify-content-center align-items-center">
@@ -96,6 +98,9 @@ function ms_edge() {
   }, 1000);
 
   $(".ms_edge_window").show('fast');
+
+  dragElement(document.getElementById("ms_edge_window"));
+
 }
 
 export {
