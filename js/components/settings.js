@@ -1,6 +1,3 @@
-import { dragElement } from "./dragElement.js";
-
-
 function settings(){
     $("main").append(`
     <div class="card shadow-lg position-absolute d-flex justify-content-center align-items-center h-75 w-50 ms_settings_window" id="ms_settings_window" style="display: none ">
@@ -65,7 +62,6 @@ function settings(){
 
     $(".ms_settings_window").show('fast');
 
-    dragElement(document.getElementById("ms_settings_window"));
 }
 
 export{settings}

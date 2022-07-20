@@ -1,6 +1,8 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-* {
+*,
+*::before,
+*::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -297,7 +299,8 @@ body main #search_field footer .input:-ms-input-placeholder {
 body main #search_field footer .input::placeholder {
   color: #9e9ea7;
 }
-body main #search_field footer .input:focus, body main #search_field footer input:hover {
+body main #search_field footer .input:focus,
+body main #search_field footer input:hover {
   outline: none;
   border-color: rgba(76, 174, 234, 0.4);
   background-color: #fff;
@@ -310,6 +313,40 @@ body main #search_field footer .icon {
   width: 1rem;
   height: 1rem;
 }
+body main .ms_store_window .ms_store_window_rightpart {
+  width: 85%;
+}
+body main .ms_store_window .ms_store_window_rightpart .ms_store_window_rightpart_downpart_adblocks_parent {
+  transform: translateY(-45px);
+}
+body main .ms_store_window .ms_store_window_rightpart .ms_store_window_rightpart_downpart_adblocks_parent .ms_store_window_rightpart_downpart_adblocks {
+  border: 2px solid #fff;
+  width: 90px;
+  height: 90px;
+  border-radius: 5px;
+}
+body main .ms_store_window .ms_store_window_rightpart .ms_store_window_rightpart_downpart_adblocks_parent .ms_store_window_rightpart_downpart_adblocks:hover {
+  border: 2px solid #0EA2FF;
+  transition: 0.3s;
+}
+body main .ms_store_window .ms_store_window_rightpart .ms_store_window_rightpart_downpart_adblocks_parent .ms_store_window_rightpart_downpart_adblocks:not(:hover) {
+  transition: 0.5s;
+}
+body main .ms_store_window #home:hover,
+body main .ms_store_window #apps:hover,
+body main .ms_store_window #games:hover,
+body main .ms_store_window #movies:hover,
+body main .ms_store_window #info:hover {
+  background: rgb(41, 162, 255);
+  transition: 0.5s;
+}
+body main .ms_store_window #home:not(:hover),
+body main .ms_store_window #apps:not(:hover),
+body main .ms_store_window #games:not(:hover),
+body main .ms_store_window #movies:not(:hover),
+body main .ms_store_window #info:not(:hover) {
+  transition: 0.5s;
+}
 body main .start_menu {
   background: rgba(255, 255, 255, 0.715);
   border-radius: 5px;
@@ -317,4 +354,9 @@ body main .start_menu {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+}
+body main .edge_active {
+  height: 100%;
+  width: 100%;
+  transition: 0.5s;
 }/*# sourceMappingURL=main.css.map */

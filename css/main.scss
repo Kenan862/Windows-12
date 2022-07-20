@@ -9,7 +9,9 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-* {
+*,
+*::before,
+*::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -162,7 +164,11 @@ body {
 
         }
 
-        & .ms_edge_window, & .explorer_window, & .ms_store_window, & .ms_security_window, & .ms_settings_window {
+        & .ms_edge_window,
+        & .explorer_window,
+        & .ms_store_window,
+        & .ms_security_window,
+        & .ms_settings_window {
             top: 10%;
         }
 
@@ -184,7 +190,8 @@ body {
             & header {
                 width: 100%;
                 height: 70px;
-                background: linear-gradient(to right, #c9d6ff, #e2e2e2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
                 display: flex;
 
                 & section {
@@ -289,7 +296,7 @@ body {
                 display: flex;
                 align-items: end;
 
-                & form{
+                & form {
                     width: 100%;
                     padding: 5px;
                 }
@@ -302,45 +309,98 @@ body {
                     width: 100%;
                 }
 
-.input {
- width: 100%;
- height: 40px;
- line-height: 28px;
- padding: 0 1rem;
- padding-left: 2.5rem;
- border: 2px solid transparent;
- border-radius: 8px;
- outline: none;
- background-color: #f3f3f4;
- color: #0d0c22;
- transition: .3s ease;
-}
+                .input {
+                    width: 100%;
+                    height: 40px;
+                    line-height: 28px;
+                    padding: 0 1rem;
+                    padding-left: 2.5rem;
+                    border: 2px solid transparent;
+                    border-radius: 8px;
+                    outline: none;
+                    background-color: #f3f3f4;
+                    color: #0d0c22;
+                    transition: .3s ease;
+                }
 
-.input::placeholder {
- color: #9e9ea7;
-}
+                .input::placeholder {
+                    color: #9e9ea7;
+                }
 
-.input:focus, input:hover {
- outline: none;
- border-color: rgba(76, 174, 234, 0.4);
- background-color: #fff;
- box-shadow: 0 0 0 4px rgba(76, 176, 234, 0.1);
-}
+                .input:focus,
+                input:hover {
+                    outline: none;
+                    border-color: rgba(76, 174, 234, 0.4);
+                    background-color: #fff;
+                    box-shadow: 0 0 0 4px rgba(76, 176, 234, 0.1);
+                }
 
-.icon {
- position: absolute;
- left: 1rem;
- fill: #9e9ea7;
- width: 1rem;
- height: 1rem;
-}
+                .icon {
+                    position: absolute;
+                    left: 1rem;
+                    fill: #9e9ea7;
+                    width: 1rem;
+                    height: 1rem;
+                }
 
             }
 
         }
 
-        & .start_menu{
+        & .ms_store_window {
+
+            .ms_store_window_rightpart {
+                width: 85%;
+
+                .ms_store_window_rightpart_downpart_adblocks_parent {
+                    // position: absolute;
+                    transform: translateY(-45px);
+
+                    .ms_store_window_rightpart_downpart_adblocks {
+                        border: 2px solid #fff;
+                        width: 90px;
+                        height: 90px;
+                        border-radius: 5px;
+
+                        &:hover {
+                            border: 2px solid #0EA2FF;
+                            transition: 0.3s;
+                        }
+
+                        &:not(:hover) {
+                            transition: 0.5s;
+                        }
+                    }
+                }
+
+                // .ms_store_window_rightpart_uppart{
+                // }
+            }
+
+            #home,
+            #apps,
+            #games,
+            #movies,
+            #info {
+                &:hover {
+                    background: rgb(41, 162, 255);
+                    transition: 0.5s;
+                }
+
+                &:not(:hover) {
+                    transition: 0.5s;
+                }
+            }
+        }
+
+        & .start_menu {
             @include glass();
+        }
+
+        .edge_active {
+            height: 100%;
+            width: 100%;
+            transition: 0.5s;
         }
 
     }

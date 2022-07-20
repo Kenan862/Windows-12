@@ -1,5 +1,3 @@
-import { dragElement } from "./dragElement.js";
-
 function explorer() {
     $("main").append(`
     <div class="card shadow-lg position-absolute d-flex justify-content-center align-items-center h-75 w-50 explorer_window" id="explorer_window" style="display: none ">
@@ -64,7 +62,6 @@ function explorer() {
 
     $(".explorer_window").show('fast');
 
-    dragElement(document.getElementById("explorer_window"));
 }
 
 export {

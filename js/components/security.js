@@ -1,6 +1,3 @@
-import { dragElement } from "./dragElement.js";
-
-
 function security(){
     $("main").append(`
     <div class="card shadow-lg position-absolute d-flex justify-content-center align-items-center h-75 w-50 ms_security_window" id="ms_security_window" style="display: none ">
@@ -65,6 +62,5 @@ function security(){
 
     $(".ms_security_window").show('fast');
 
-    dragElement(document.getElementById("ms_security_window"));
 }
 export{security}

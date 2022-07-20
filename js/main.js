@@ -14,33 +14,46 @@ $(document).ready(() => {
     start_menu();
     $(document).one("click", "#search_btn", search);
     $(document).on("click", "#file_explorer_btn", ()=>{
-        explorer();
-        $("#file_explorer_btn").css({
-            "border-bottom" : "3px solid #0EA2FF",
-        });
+        if(!$('.explorer_window').length){
+            explorer();
+            $("#file_explorer_btn").css({
+                "border-bottom" : "3px solid #0EA2FF",
+            });
+        }
     });
     $(document).on("click", "#microsoft_store_btn", ()=>{
-        store();
-        $("#microsoft_store_btn").css({
-            "border-bottom" : "3px solid #0EA2FF",
-        });
+        if(!$('.ms_store_window').length){
+            store();
+            $("#microsoft_store_btn").css({
+                "border-bottom" : "3px solid #0EA2FF",
+            });
+        }
     });
     $(document).on("click", "#microsoft_defender_btn", ()=>{
-        security();
-        $("#microsoft_defender_btn").css({
-            "border-bottom" : "3px solid #0EA2FF",
-        });
+        if(!$('.ms_security_window').length){
+            security();
+            $("#microsoft_defender_btn").css({
+                "border-bottom" : "3px solid #0EA2FF",
+            });
+        }
     });
     $(document).on("click", "#microsoft_settings_btn", ()=>{
-        settings();
-        $("#microsoft_settings_btn").css({
-            "border-bottom" : "3px solid #0EA2FF",
-        });
+        if(!$('.ms_settings_window').length){
+            settings();
+            $("#microsoft_settings_btn").css({
+                "border-bottom" : "3px solid #0EA2FF",
+            });
+        }
     });
+
+    let counter = 0;
+    
     $(document).on("click", "#microsoft_edge_btn", ()=>{
-        ms_edge();
         $("#microsoft_edge_btn").css({
             "border-bottom" : "3px solid #0EA2FF",
         });
+        if(!$('.ms_edge_window').length){
+            ms_edge();
+        }
     });
 });

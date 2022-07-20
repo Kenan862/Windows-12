@@ -1,5 +1,3 @@
-import { dragElement } from "./dragElement.js";
-
 function ms_edge() {
   $("main").append(`
     <div class="card shadow-lg position-absolute d-flex justify-content-center align-items-center h-75 w-50 ms_edge_window" id="ms_edge_window" style="display: none">
@@ -29,33 +27,33 @@ function ms_edge() {
       </div>
   `);
 
-      $(".edge_content").empty().append(`<iframe src="https://www.bing.com?igu=1" class="h-100 w-100 border-0 embed-responsive-item windowframe"></iframe>`);
+      // $(".edge_content").empty().append(`<iframe src="https://www.bing.com?igu=1" class="h-100 w-100 border-0 embed-responsive-item windowframe"></iframe>`);
 
-      $(document).on("click", ".back_btn", () => {
-        if (!$(".windowframe").attr("src", "https://www.bing.com?igu=1")) {
-          window.history.back();
-        }
-      });
-      $(document).on("click", ".refresh_btn", () => {
-        if (!$(".windowframe").attr("src", "https://www.bing.com?igu=1")) {
-          window.location.reload();
-        }
-      });
-      $(document).on("click", ".forward_btn", () => {
-        if ($(".windowframe").attr("src", "https://www.bing.com?igu=1")) {
-          window.history.forward();
-        }
-      });
-      $(".web-search").bind("enterKey", function (e) {
-        $(".windowframe").attr("src", `https://www.${$(this).val()}?igu=1`);
-      });
-      $(".web-search").keyup(function (e) {
-        if (e.keyCode == 13) {
-          $(this).trigger("enterKey");
-        }
-      });
+      // $(document).on("click", ".back_btn", () => {
+      //   if (!$(".windowframe").attr("src", "https://www.bing.com?igu=1")) {
+      //     window.history.back();
+      //   }
+      // });
+      // $(document).on("click", ".refresh_btn", () => {
+      //   if (!$(".windowframe").attr("src", "https://www.bing.com?igu=1")) {
+      //     window.location.reload();
+      //   }
+      // });
+      // $(document).on("click", ".forward_btn", () => {
+      //   if ($(".windowframe").attr("src", "https://www.bing.com?igu=1")) {
+      //     window.history.forward();
+      //   }
+      // });
+      // $(".web-search").bind("enterKey", function (e) {
+      //   $(".windowframe").attr("src", `https://www.${$(this).val()}?igu=1`);
+      // });
+      // $(".web-search").keyup(function (e) {
+      //   if (e.keyCode == 13) {
+      //     $(this).trigger("enterKey");
+      //   }
+      // });
 
-      $(document).on("click", ".close_btn", () => {
+      $(document).on("click", ".close_btn", (e) => {
         $(".ms_edge_window").css({
           "transform": "scale(0.5,0.5)",
           "opacity": "0",
@@ -66,7 +64,8 @@ function ms_edge() {
           "transition": "0.1s",
         });
         setTimeout(() => {
-          $("main").children().remove(".ms_edge_window");
+          // $("main").children().remove(".ms_edge_window");
+          $(e.target).parents('.ms_edge_window').remove();
         }, 500);
       });
 
@@ -98,8 +97,6 @@ function ms_edge() {
   }, 1000);
 
   $(".ms_edge_window").show('fast');
-
-  dragElement(document.getElementById("ms_edge_window"));
 
 }
 

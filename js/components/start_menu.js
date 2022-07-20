@@ -71,6 +71,16 @@ function start_menu() {
             $(".start_menu").show("fast");
         }
     });
+
+    let recentApps = new Set([]);
+
+    $(document).on("click", ".taskbar_btn", (e)=>{
+        recentApps.add($(e.target).attr("id"));
+    });
+
+    for(let i=0; i<recentApps.length; i++) {
+        console.log("object");
+    }
 }
 
 export {
